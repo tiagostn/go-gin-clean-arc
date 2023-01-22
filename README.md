@@ -1,6 +1,18 @@
 # go-gin-clean-arc
 Go api using Gin with clean architecture
 
-### Development
+Build
 
-    CompileDaemon -command="./go-gin-clean-arc"
+    make build
+
+Development
+
+    make dev
+
+Test
+
+    make test
+
+ Generate Swagger files
+
+    make swaggo

@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  web:
+    container_name: api
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile.hotreload
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:
+      - ./:/app

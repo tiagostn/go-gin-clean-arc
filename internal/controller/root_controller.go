@@ -14,5 +14,5 @@ import (
 // @Success      200  {object}  string
 // @Router       / [get]
 func RootController(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, gin.H{"message": "hello world 👌 from controller!"})
+	c.IndentedJSON(http.StatusOK, gin.H{"message": "hello world 👌 from docker!"})
 }

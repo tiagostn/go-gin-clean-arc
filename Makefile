@@ -11,12 +11,14 @@ dev:
 test:
 	go test -cover ./...
 
+# Docker
+dockerdev:
+	docker-compose -f docker-compose.dev.yml up --build
 
 # Modules
 tidy:
 	go mod tidy
 	go mod vendor
-
 
 # Tools
 run-linter:
