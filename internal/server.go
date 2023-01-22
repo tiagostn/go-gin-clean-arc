@@ -21,6 +21,7 @@ func Server() *gin.Engine {
 	docs.SwaggerInfo.Description = "Example Golang REST API - overrided"
 
 	server.GET("/", controller.RootController)
+	server.GET("/user", controller.DefaultUserController)
 	server.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	return server
 }

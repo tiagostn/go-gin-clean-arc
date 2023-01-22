@@ -1,4 +1,14 @@
 basePath: /
+definitions:
+  model.User:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
 info:
   contact:
     email: tiago.santana@gmail.com
@@ -21,4 +31,15 @@ paths:
           schema:
             type: string
       summary: Root
+  /user:
+    get:
+      description: get default user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      summary: Default User
 swagger: "2.0"
