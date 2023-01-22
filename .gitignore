@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+go-gin-clean-arc
 
 # Test binary, built with `go test -c`
 *.test
