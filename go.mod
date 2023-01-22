@@ -8,6 +8,8 @@ require (
 	github.com/swaggo/swag v1.8.1
 )
 
+require github.com/danielkov/gin-helmet v0.0.0-20171108135313-1387e224435e // indirect
+
 require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect

@@ -1,6 +1,7 @@
 package internal
 
 import (
+	helmet "github.com/danielkov/gin-helmet"
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -10,13 +11,16 @@ import (
 )
 
 func Server() *gin.Engine {
-	engine := gin.Default()
-	engine.Use(middlewares.Logger())
-	engine.Use(middlewares.Analytics())
+	server := gin.Default()
+
+	server.Use(helmet.Default())
+
+	server.Use(middlewares.Logger())
+	server.Use(middlewares.Analytics())
 
 	docs.SwaggerInfo.Description = "Example Golang REST API - overrided"
 
-	engine.GET("/", controller.RootController)
-	engine.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	return engine
+	server.GET("/", controller.RootController)
+	server.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	return server
 }
