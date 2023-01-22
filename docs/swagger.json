@@ -48,6 +48,32 @@
                     }
                 }
             }
+        },
+        "/users": {
+            "get": {
+                "description": "Get all the existing users",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "List existing users",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.User"
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {

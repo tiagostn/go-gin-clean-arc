@@ -42,4 +42,21 @@ paths:
           schema:
             $ref: '#/definitions/model.User'
       summary: Default User
+  /users:
+    get:
+      consumes:
+      - application/json
+      description: Get all the existing users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+      summary: List existing users
+      tags:
+      - users
 swagger: "2.0"
