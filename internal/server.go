@@ -6,10 +6,13 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/tiagostn/go-gin-clean-arc/docs"
 	"github.com/tiagostn/go-gin-clean-arc/internal/controller"
+	"github.com/tiagostn/go-gin-clean-arc/internal/middlewares"
 )
 
 func Server() *gin.Engine {
 	engine := gin.Default()
+	engine.Use(middlewares.Logger())
+	engine.Use(middlewares.Analytics())
 
 	docs.SwaggerInfo.Description = "Example Golang REST API - overrided"
 
