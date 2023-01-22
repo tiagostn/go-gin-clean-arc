@@ -1,0 +1,24 @@
+basePath: /
+info:
+  contact:
+    email: tiago.santana@gmail.com
+    name: Tiago Sant'Ana
+    url: https://github.com/tiagostn
+  description: Example Golang REST API
+  title: Go api using Gin with clean architecture
+  version: "1.0"
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: get hello world response
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Root
+swagger: "2.0"

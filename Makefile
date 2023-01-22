@@ -16,3 +16,11 @@ test:
 tidy:
 	go mod tidy
 	go mod vendor
+
+
+# Tools
+run-linter:
+	golangci-lint run ./...
+
+swaggo:
+	swag init -g cmd/server/main.go
