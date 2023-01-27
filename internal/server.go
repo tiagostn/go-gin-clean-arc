@@ -18,7 +18,7 @@ var (
 	userController controller.UserController = controller.NewUserController(userService)
 )
 
-func Server() *gin.Engine {
+func NewServer() *gin.Engine {
 	server := gin.Default()
 
 	server.Use(helmet.Default())

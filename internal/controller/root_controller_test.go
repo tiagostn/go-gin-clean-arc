@@ -10,7 +10,7 @@ import (
 )
 
 func TestRootController(t *testing.T) {
-	server := internal.Server()
+	server := internal.NewServer()
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest(http.MethodGet, "/", nil)
 	server.ServeHTTP(w, req)

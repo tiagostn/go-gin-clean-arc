@@ -15,6 +15,6 @@ import (
 // @BasePath /
 func main() {
 	fmt.Println("Golang Gin Server 👌")
-	server := internal.Server()
+	server := internal.NewServer()
 	server.Run()
 }
